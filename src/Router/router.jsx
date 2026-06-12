@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Homelayout from "../pages/Homelayout/Homelayout";
 import Home from "../pages/Home/Home";
 import Coverage from "../pages/Coverage/Coverage";
-
+import serviceCenterData from '../../public/ServiceCenters.json'
 export const router = createBrowserRouter([
     {
         path:"/",
@@ -15,7 +15,8 @@ export const router = createBrowserRouter([
             {
                 path:'coverage',
                 element:<Coverage></Coverage>,
-                loader:()=> fetch('/public/ServiceCenters.json').then(res=>res.json())
+                loader :()=> serviceCenterData
+                // loader:()=> fetch('/public/ServiceCenters.json').then(res=>res.json())
             }
         ]
         
