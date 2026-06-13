@@ -4,7 +4,7 @@ import HowItWorks from './HowItWorks';
 import OurServices from './OurServices';
 import Brands from './Brands';
 import Reveiws from './Reveiws';
-const reviewPromise = fetch('../../../public/reviews.json').then(res=>res.json())
+const reviewPromise = fetch('../../Jsons/reviews.json').then(res=>res.json())
 const Home = () => {
     return (
         <div>
