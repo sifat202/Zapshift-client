@@ -4,10 +4,13 @@ import HowItWorks from './HowItWorks';
 import OurServices from './OurServices';
 import Brands from './Brands';
 import Reveiws from './Reveiws';
-const reviewPromise = fetch('../../Jsons/reviews.json').then(res=>res.json())
+import Procedure from '../../Components/Procedure.jsx/Procedure';
+import EarnBanner from '../../Components/Earn/EarnBanner';
+
+// const reviewPromise = fetch('../../Jsons/reviews.json').then(res=>res.json())
 const Home = () => {
     return (
-        <div>
+        <div className='flex flex-col justify-center'>
             <Banner></Banner>
             <div className="py-10">
                 <HowItWorks></HowItWorks>
@@ -19,7 +22,13 @@ const Home = () => {
                 <Brands></Brands>
             </div>
             <div className="my-10">
-    <Reveiws reviewPromise={reviewPromise}></Reveiws>
+    <Reveiws></Reveiws>
+            </div>
+            <div className="my-10">
+                <Procedure></Procedure>
+            </div>
+            <div className="my-10 mx-auto">
+<EarnBanner></EarnBanner>
             </div>
         </div>
     );

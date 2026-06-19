@@ -2,9 +2,10 @@ import React, { use } from 'react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TestimonialCard from '../../Components/Testimonialcard';
+import reviewPromise from '../../Jsons/reviews.json'
 
-const Reveiws = ({ reviewPromise }) => {
-    const reveiws = use(reviewPromise);
+const Reveiws = () => {
+    const reveiws = reviewPromise;
 
     return (
         <div>

@@ -1,12 +1,13 @@
 // import React, { use } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useLoaderData } from 'react-router';
+// import { useLoaderData } from 'react-router';
 import { useRef } from 'react';
+import serviceData from '../../Jsons/ServiceCenters.json'
 
 const Coverage = () => {
     const position = [23, 90]
-    const serviceCenters = useLoaderData();
+    const serviceCenters = serviceData;
     // console.log(serviceCenters)
     const MapRef =useRef(null)
     const handleSearch =(e)=>{

@@ -45,9 +45,9 @@ SetIsClicked(id);
             <p>Enjoy fast, reliable parcel delivery with real-time tracking and zero hassle. From personal packages to business shipments — we deliver on time, every time.</p>
             </div>
            
-            <div className="   grid grid-cols-3 mx-auto w-[1100px] justify-center  p-10 gap-5 ">
+            <div className="   grid grid-cols-3 mx-auto max-w-[1100px] justify-center  p-10 2xl:gap-5 gap-1 ">
                 {info.map((item)=>(
-                    <div onClick={()=>funClick(item.id)}  key={item.id} className={`flex-col ${IsClicked === item.id ? "bg-yellow-200" : "bg-white"} space-y-5 max-w-100 p-8 rounded-2xl justify-center h-75 cursor-pointer`}>
+                    <div onClick={()=>funClick(item.id)}  key={item.id} className={`flex-col ${IsClicked === item.id ? "bg-yellow-200" : "bg-white"} space-y-5 2xl:max-w-100 max-w-70 p-8 rounded-2xl justify-center  2xl:h-75 cursor-pointer`}>
                         <img className='mx-auto h-15' src={img} alt="" />
                         <div className="text-center space-y-3">
                             <h3 className="font-semibold">{item.title}</h3>
